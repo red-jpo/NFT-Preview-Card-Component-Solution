@@ -1,6 +1,6 @@
 # Frontend Mentor - Results Summary Component
 
-This project is the solution for [Frontend Mentor Results Summary Component challenge](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV/hub) for beginners to improve HTML and CSS skills.
+This project is the solution for [Frontend Mentor Results Summary Component challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) for beginners to improve HTML and CSS skills.
 
 ## Table of contents
 
