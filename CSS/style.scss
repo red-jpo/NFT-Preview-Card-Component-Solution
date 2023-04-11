@@ -1,0 +1,165 @@
+//Primary
+$Soft-blue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+//Neutral
+$main-bg-blue: hsl(217, 54%, 11%);
+$card-bg-blue: hsl(216, 50%, 16%);
+$line-blue: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+$shadow: hsla(0, 0%, 0%, 0.09);
+
+* {
+  font-size: 18px;
+  text-align: left;
+  font-family: "Outfit", sans-serif;
+  color: $Soft-blue;
+  font-weight: 300;
+}
+
+.bgc-main {
+  background-color: $main-bg-blue;
+}
+
+main {
+  height: 95vh;
+}
+
+.card {
+  padding: 1.35rem 1.35rem 2rem;
+  width: 19.5rem;
+  background-color: $card-bg-blue;
+  border-radius: 0.85rem;
+  box-shadow: 0px 25px 50px $shadow;
+  //[horizontal offset] [vertical offset] [blur radius] [color]
+
+  .card-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+}
+
+.image-container {
+  position: relative;
+  //position: relative;: This property sets the positioning context of the .image-container element to "relative". This means that any absolutely positioned child elements will be positioned relative to the .image-container element.
+
+  .main-image {
+    height: 302px;
+    width: 302px;
+    border-radius: 0.55rem;
+  }
+
+  .overlay {
+    position: absolute;
+    //position: absolute;: This property sets the positioning context of the .overlay element to "absolute". This means that the .overlay element will be positioned relative to its closest positioned ancestor, which in this case is the .image-container element with position: relative;.
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    //top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%;: These properties ensure that the .overlay element fully covers the image.
+
+    opacity: 0;
+    background-color: $Cyan;
+    border-radius: 10px;
+  }
+
+  .view {
+    position: absolute;
+    //position: absolute;: This property sets the positioning context of the .view element to "absolute". This means that the .view element will be positioned relative to its closest positioned ancestor, which in this case is also the .image-container element.
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //transform: translate(-50%, -50%);: This property uses the translate() function to shift the .view element up and to the left by 50% of its own width and height, respectively. This ensures that it is centered precisely within its parent .image-container element.
+    text-align: center;
+    display: none;
+  }
+
+  &:hover .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+    //The &:hover .overlay rule targets the .overlay element when the parent .image-container is being hovered.
+  }
+
+  &:hover .overlay + .view {
+    display: block;
+    //If there is only one element with the class .view inside .image-container, using &:hover .view would have the same effect as &:hover .overlay + .view. In both cases, the styles inside the selector would be applied to the .view element when the .image-container is hovered.
+    //However, using &:hover .overlay + .view is more specific and provides more control over the styles that should be applied. It ensures that the styles will only be applied to .view when it is immediately adjacent to .overlay in the DOM. This can be useful in cases where there may be other elements between .overlay and .view that you don't want to apply the styles to.
+  }
+}
+
+.card-bod {
+  margin-top: 1.24rem;
+
+  .description {
+    margin: 0.8rem 0;
+  }
+
+  .price-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+
+  span {
+    font-size: 0.88rem;
+  }
+  .icon {
+    margin-right: 0.25rem;
+  }
+
+  .price,
+  .time {
+    display: flex;
+    align-items: center;
+  }
+
+  .eth {
+    font-weight: 600;
+    color: $Cyan;
+    font-size: 0.9rem;
+  }
+}
+
+.creation {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $line-blue;
+  padding-top: 1rem;
+
+  .profile-pic {
+    height: 1.8rem;
+    width: 1.8rem;
+    border: 1px solid $White;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  .artist {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
+
+.link {
+  color: $White;
+
+  &:hover {
+    color: $Cyan;
+    //Adding a space between two selectors in CSS means that you are selecting an element that is a descendant of the first selector. So in the compiled CSS, .link :hover would mean that any element that is a descendant of the .link element and is being hovered over should have the styles applied.
+    //To avoid this, use the '&' character in SASS, which will concatenate the parent selector with the child selector without adding a space.
+  }
+}
+
+footer {
+  height: 5vh;
+
+  .attribution {
+    text-align: center;
+    font-size: 0.62rem;
+    text-decoration: none;
+  }
+}

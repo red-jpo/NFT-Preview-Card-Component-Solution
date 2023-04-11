@@ -1,0 +1,126 @@
+* {
+  font-size: 18px;
+  text-align: left;
+  font-family: "Outfit", sans-serif;
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+.bgc-main {
+  background-color: hsl(217, 54%, 11%);
+}
+
+main {
+  height: 95vh;
+}
+
+.card {
+  padding: 1.35rem 1.35rem 2rem;
+  width: 19.5rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 0.85rem;
+  box-shadow: 0px 25px 50px hsla(0, 0%, 0%, 0.09);
+}
+.card .card-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.image-container {
+  position: relative;
+}
+.image-container .main-image {
+  height: 302px;
+  width: 302px;
+  border-radius: 0.55rem;
+}
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 10px;
+}
+.image-container .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+.image-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.image-container:hover .overlay + .view {
+  display: block;
+}
+
+.card-bod {
+  margin-top: 1.24rem;
+}
+.card-bod .description {
+  margin: 0.8rem 0;
+}
+.card-bod .price-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.card-bod span {
+  font-size: 0.88rem;
+}
+.card-bod .icon {
+  margin-right: 0.25rem;
+}
+.card-bod .price,
+.card-bod .time {
+  display: flex;
+  align-items: center;
+}
+.card-bod .eth {
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+  font-size: 0.9rem;
+}
+
+.creation {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  padding-top: 1rem;
+}
+.creation .profile-pic {
+  height: 1.8rem;
+  width: 1.8rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.creation .artist {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.link {
+  color: hsl(0, 0%, 100%);
+}
+.link:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+footer {
+  height: 5vh;
+}
+footer .attribution {
+  text-align: center;
+  font-size: 0.62rem;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
