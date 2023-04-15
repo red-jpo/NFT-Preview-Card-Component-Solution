@@ -1,6 +1,6 @@
-# Frontend Mentor - Results Summary Component
+# Frontend Mentor - NFT Preview Card Component
 
-This project is the solution for [Frontend Mentor Results Summary Component challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) for beginners to improve HTML and CSS skills.
+This project is the solution for [Frontend Mentor NFT Preview Card Component](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U/hub) for beginners to improve HTML and CSS skills.
 
 ## Table of contents
 
